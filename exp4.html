@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Experiment-4</title>
+
+    <style>
+      .top{
+        margin: 20px;
+      }
+
+      * {
+        box-sizing: border-box;
+        }
+
+      .row {
+        display: flex;
+        margin-left:-5px;
+        margin-right:-5px;
+      }
+        
+      .column {
+        flex: 50%;
+        padding: 5px;;
+      }
+
+      .table-left
+
+        {
+          border: 1px solid black;
+          border-collapse: collapse;
+          padding: 6px;
+          margin-left: 10px;
+          border-color: #36e2f5;
+          width: 75%;
+          border-spacing: 5px;     
+      }
+
+      td{
+        
+        padding: 6px;
+        width: 5px;
+
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div class="top">
+      <img src = "data:image/jpeg;base64,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" width="100" height="80" align="left">
+        <div class=" bg-light align-middle text-right ">
+        
+
+        <button type ="button" class="'btn btn-link"">Home</button>
+        <button type ="button" class="'btn btn-link">Service</button>
+        <button type ="button" class="'btn btn-link">Clients</button>
+        <button type ="button" class="'btn btn-link">Contact Us</button>
+        <button type ="button" class="'btn btn-link ">Login/Sign Up</button>
+    
+        <input type="text" placeholder="Search Here...">
+        <button type ="button" class="'btn btn-primary ">submit</button>
+
+        </div>
+    </div><br><br>
+      
+    
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+    
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="https://wallpaperaccess.com/full/25682.jpg" alt="Los Angeles">
+        </div>
+    
+        <div class="item">
+          <img src="https://p4.wallpaperbetter.com/wallpaper/183/413/101/21-x-9-china-photography-architecture-wallpaper-preview.jpg" alt="Chicago">
+        </div>
+    
+        <div class="item">
+          <img src="https://img.wallpapersafari.com/desktop/1366/768/21/13/TRucYQ.jpg" alt="New York">
+        </div>
+      </div>
+    
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><br>
+
+    <div class="row">
+      <div class="column">
+        <table class="table-left">
+          <tr>
+            <td colspan="4" align="center"><h1 class="text-primary" >Registration Form</h1></td>
+          </tr>
+          <tr>
+              <td colspan="2">Email</td>
+              <td colspan="2">Password</td>
+          </tr>
+          <tr>
+              <td colspan="2"><input type="email" size="25"></td>
+              <td colspan="2"><input type="password" size="25"></td>
+          </tr>
+          <tr>
+              <td colspan="4">Address</td>
+              
+          </tr>
+          <tr>
+            <td colspan="4"><input type="text" placeholder="1234 Main St" size="57"></td>
+
+          </tr>
+
+          <tr>
+            <td colspan="4">Address 2</td>
+            
+          </tr>
+          <tr>
+            <td colspan="4"><input type="text" placeholder="Apartment, studio or floor" size="57"></td>
+
+          </tr>
+          <tr>
+            <td colspan="2">City</td>
+            <td>State</td>
+            <td>Zip</td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="text" size="25"></td>
+            <td> <select name="cars" id="cars">
+              <option>Tamil Nadu</option>
+              <option>Kerala</option>
+              <option>Andhra Pradesh</option>
+              <option>Delhi</option>
+              </select></td>
+            <td><input type="text" size="6"></td>
+          </tr>
+          <tr>
+            <td colspan="4"><input type="checkbox">Check me out</td>
+          </tr>
+
+          <tr>
+            <td colspan="4"><button type ="button" class="'btn btn-primary">Sign in</button></td>
+          </tr>
+
+        </table> 
+      </div>
+      <div class="column">
+        <table class="table table-bordered" style="border-color:ash ;" >
+    
+          <tr class="bg-primary" >
+            <th>S.No</th>
+            <th>Reg. No</th>
+            <th>Name of the Participant</th>
+            <th>Collaborative activity</th>
+            <th>Collaborating agency</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>UR16AE001</td>
+            <td>ANIT ANU JOHN</td>
+            <td>Product Design and Analysis</td>
+            <td>CADD Centre</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>UR16AE011</td>
+            <td>VASANTHA KANESH M</td>
+            <td>Product Design and Analysis</td>
+            <td>CADD Centre</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>UR16AE013</td>
+            <td>ABIJITH J</td>
+            <td>Product Design and Analysis</td>
+            <td>CADD Centre</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>UR16AE015</td>
+            <td>JEBIN JOHN J</td>
+            <td>Product Design and Analysis</td>
+            <td>CADD Centre</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>UR16AE018</td>
+            <td>JOSHI K J</td>
+            <td>Product Design and Analysis</td>
+            <td>CADD Centre</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>UR16AE020</td>
+            <td>J P GOKUL</td>
+            <td>Product Design and Analysis</td>
+            <td>CADD Centre</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>UR16AE021</td>
+            <td>JEROME</td>
+            <td>Product Design and Analysis</td>
+            <td>CADD Centre</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>UR16AE022</td>
+            <td>AFNAN M. ARIEF</td>
+            <td>Product Design and Analysis</td>
+            <td>CADD Centre</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
